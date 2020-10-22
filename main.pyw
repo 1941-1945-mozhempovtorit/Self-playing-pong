@@ -65,13 +65,13 @@ while isRunning:
     # --"CONTROLS"--
     # Left paddle (A)
     if ball.velocity[0] < 0:
-        if ball.rect.y + ball_radius < paddleA.rect.y + 50:  # If ball is upper than paddle
+        if ball.rect.y + ball_radius < paddleA.rect.y + 50:  # If ball is upper than paddle move it
             if ball.rect.y + ball_radius > paddleA.rect.y + 40:  # Makes it smoother
                 paddleA.move_up(paddle_speed // 2)
             else:
                 paddleA.move_up(paddle_speed)
         elif ball.rect.y + ball_radius > paddleA.rect.y + 70:  # If ball is lower than paddle
-            if ball.rect.y + ball_radius < paddleA.rect.y + 80:  # Makes it smoother
+            if ball.rect.y + ball_radius < paddleA.rect.y + 80:
                 paddleA.move_down(paddle_speed // 2, res_y)
             else:
                 paddleA.move_down(paddle_speed, res_y)
